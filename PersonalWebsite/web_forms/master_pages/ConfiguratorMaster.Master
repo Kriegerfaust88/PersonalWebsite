@@ -24,13 +24,12 @@
             <nav>
                 <ul class="navBarList">
                     <li><a class="navBarListItem" href="../RC_Configurator/ConfiguratorHome.aspx">Home</a></li>
-                    <li><a class="navBarListItem">Aircraft Configuration</a></li>
-                    <li><a class="navBarListItem">Components</a></li>
-                    <li><a class="navBarListItem">Add a Component</a></li>
+                    <li><a class="navBarListItem" href="../RC_Configurator/AircraftConfiguration/AircraftConfiguration.aspx">Aircraft Configuration</a></li>
+                    <li><a class="navBarListItem" href="../RC_Configurator/Components.aspx">Components</a></li>
                     <li class="dropdown">
                         <a>About</a>
                         <ul class="sub-menu">
-                            <li><a>About RC Configurator</a></li>
+                            <li><a href="../RC_Configurator/AboutConfigurator.aspx">About RC Configurator</a></li>
                             <li><a href="../Personal/Home.aspx">Author Homepage</a></li>
                         </ul>
                     </li>

@@ -9,11 +9,10 @@ using System.Web.UI.WebControls;
 
 namespace PersonalWebsite.web_forms.RC_Configurator.new_component_forms
 {
-    public partial class NewMotor : System.Web.UI.Page
+    public partial class NewServo : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
 
         }
 
@@ -27,23 +26,18 @@ namespace PersonalWebsite.web_forms.RC_Configurator.new_component_forms
 
                 using (con)
                 {
-                    //Create a new SQL command with parameteres for inserting into Motors table of Components database
+                    //Create a new SQL command with parameteres for inserting into Servos table of Components database
                     using (SqlCommand cmd = new SqlCommand(
-                        "INSERT INTO Motors (name, kv, maxCurrent, maxVoltage, maxPower, battMinCell, battMaxCell, requiredEscAmps, weight) VALUES(@name, @kv, @maxCurrent, @maxVoltage @maxPower, @battMinCell, @battMaxCell, @requiredEscAmps, @weight)"))
+                        "INSERT INTO Servos (name, weight, minVoltage, maxVoltage) VALUES(@name, @weight, @minVoltage, @maxVoltage)"))
                     {
                         cmd.Connection = con;
                         cmd.Parameters.AddWithValue("@name", nameTextBox.Text);
-                        cmd.Parameters.AddWithValue("@kv", kvTextBox.Text);
-                        cmd.Parameters.AddWithValue("@maxCurrent", maxCurrentTextBox.Text);
+                        cmd.Parameters.AddWithValue("@weight", weightTextBox.Text);;
+                        cmd.Parameters.AddWithValue("@minVoltage", minVoltageTextBox.Text);
                         cmd.Parameters.AddWithValue("@maxVoltage", maxVoltageTextBox.Text);
-                        cmd.Parameters.AddWithValue("@maxPower", maxPowerTextBox.Text);
-                        cmd.Parameters.AddWithValue("@weight", weightTextBox.Text);
-                        cmd.Parameters.AddWithValue("@battMinCell", minCellDropdown.SelectedValue.ToString());
-                        cmd.Parameters.AddWithValue("@battMaxCell", maxCellDropdown.SelectedValue.ToString());
-                        cmd.Parameters.AddWithValue("@requiredEscAmps", reqEscAmpsTextBox.Text);
                         con.Open();
                         cmd.ExecuteNonQuery();
-                        con.Close(); 
+                        con.Close();
                     }
                 }
             }

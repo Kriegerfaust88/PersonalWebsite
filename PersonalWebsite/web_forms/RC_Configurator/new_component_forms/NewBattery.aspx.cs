@@ -22,19 +22,17 @@ namespace PersonalWebsite.web_forms
         {
             if (IsValid)
             {
+                //Create a new SQL connection using the connection string in Web.config
                 SqlConnection con = new SqlConnection(
                     WebConfigurationManager.ConnectionStrings["ComponentsConnectionString"].ConnectionString);
-                // Create a new string from the ComponentConnectionString connection string used for the page's SQLDataSources
-                // string constr = ConfigurationManager.ConnectionStrings["ComponentConnectionString"].ConnectionString;
-                // Create a new connection using constr
+
                 using (con)
                 {
                     //Create a new SQL command with parameteres for inserting into Batteries table of Components database
                     using (SqlCommand cmd = new SqlCommand(
-                        "INSERT INTO Batteries (ComponentID, name, capacity, configuration, contDischargeRate, peakDischargeRate, weight) VALUES(@ComponentID, @name, @capacity, @configuration, @contDischargeRate, @peakDischargeRate, @weight)"))
+                        "INSERT INTO Batteries (name, capacity, configuration, contDischargeRate, peakDischargeRate, weight) VALUES(@name, @capacity, @configuration, @contDischargeRate, @peakDischargeRate, @weight)"))
                     {
                         cmd.Connection = con;
-                        cmd.Parameters.AddWithValue("@ComponentID", 1);
                         cmd.Parameters.AddWithValue("@name", nameTextBox.Text);
                         cmd.Parameters.AddWithValue("@capacity", capacityTextBox.Text);
                         cmd.Parameters.AddWithValue("@configuration", configDropdown.SelectedValue.ToString());

@@ -105,10 +105,16 @@
     <Content Include="scripts\Components.js" />
     <Content Include="styles\ComponentStyle.css" />
     <Content Include="styles\NewComponentStyle.css" />
+    <Content Include="web_forms\RC_Configurator\AboutConfigurator.aspx" />
+    <Content Include="web_forms\RC_Configurator\AircraftConfiguration\AircraftConfiguration.aspx" />
     <Content Include="web_forms\RC_Configurator\Components.aspx" />
     <Content Include="web_forms\RC_Configurator\ConfiguratorHome.aspx" />
     <Content Include="web_forms\RC_Configurator\new_component_forms\NewBattery.aspx" />
     <Content Include="web_forms\RC_Configurator\new_component_forms\NewMotor.aspx" />
+    <Content Include="web_forms\RC_Configurator\new_component_forms\NewPropeller.aspx" />
+    <Content Include="web_forms\RC_Configurator\new_component_forms\NewReceiver.aspx" />
+    <Content Include="web_forms\RC_Configurator\new_component_forms\NewServo.aspx" />
+    <Content Include="web_forms\RC_Configurator\new_component_forms\NewSpeedController.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -156,6 +162,20 @@
     <Compile Include="web_forms\Personal\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
+    <Compile Include="web_forms\RC_Configurator\AboutConfigurator.aspx.cs">
+      <DependentUpon>AboutConfigurator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web_forms\RC_Configurator\AboutConfigurator.aspx.designer.cs">
+      <DependentUpon>AboutConfigurator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web_forms\RC_Configurator\AircraftConfiguration\AircraftConfiguration.aspx.cs">
+      <DependentUpon>AircraftConfiguration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web_forms\RC_Configurator\AircraftConfiguration\AircraftConfiguration.aspx.designer.cs">
+      <DependentUpon>AircraftConfiguration.aspx</DependentUpon>
+    </Compile>
     <Compile Include="web_forms\RC_Configurator\Components.aspx.cs">
       <DependentUpon>Components.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -183,6 +203,34 @@
     </Compile>
     <Compile Include="web_forms\RC_Configurator\new_component_forms\NewMotor.aspx.designer.cs">
       <DependentUpon>NewMotor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web_forms\RC_Configurator\new_component_forms\NewPropeller.aspx.cs">
+      <DependentUpon>NewPropeller.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web_forms\RC_Configurator\new_component_forms\NewPropeller.aspx.designer.cs">
+      <DependentUpon>NewPropeller.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web_forms\RC_Configurator\new_component_forms\NewReceiver.aspx.cs">
+      <DependentUpon>NewReceiver.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web_forms\RC_Configurator\new_component_forms\NewReceiver.aspx.designer.cs">
+      <DependentUpon>NewReceiver.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web_forms\RC_Configurator\new_component_forms\NewServo.aspx.cs">
+      <DependentUpon>NewServo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web_forms\RC_Configurator\new_component_forms\NewServo.aspx.designer.cs">
+      <DependentUpon>NewServo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web_forms\RC_Configurator\new_component_forms\NewSpeedController.aspx.cs">
+      <DependentUpon>NewSpeedController.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web_forms\RC_Configurator\new_component_forms\NewSpeedController.aspx.designer.cs">
+      <DependentUpon>NewSpeedController.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
