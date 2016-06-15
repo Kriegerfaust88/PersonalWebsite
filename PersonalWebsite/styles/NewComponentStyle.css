@@ -1,0 +1,31 @@
+﻿body {
+}
+
+.fieldContainer {
+    display: block;
+    height: 25px;
+    float: left;
+    width: 409px;
+}
+
+.labelContainer {
+    float: left;
+    margin: 0;
+}
+
+.inputContainer {
+    float: right;
+}
+
+#formContainer {
+    width: 649px;
+}
+
+.paddingDiv {
+    height: 5px;
+}
+
+.submissionControls {
+    float: left;
+    width: 100px;
+}

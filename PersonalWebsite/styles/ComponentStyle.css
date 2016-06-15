@@ -1,0 +1,13 @@
+﻿body {
+}
+
+.modalBackground {
+    background-color: Black;
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+}
+
+#PopupFrame {
+    height: 500px;
+    width: 400px;
+}

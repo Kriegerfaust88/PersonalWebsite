@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ConfiguratorMaster.master.cs" Inherits="PersonalWebsite.web_forms.master_pages.ConfiguratorMaster" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script src="../../scripts/jquery-2.2.3.js"></script>
+    <link type="text/css" href="../../styles/ConfiguratorMasterStyle.css" rel="stylesheet" />
+    <script src="../../scripts/ConfiguratorMasterScript.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <header>
+        <div class="pageHeading">
+            <h1 class="mainHeading">RC Configurator</h1>
+            <h2 class="subHeading">Configure your RC aircraft here!</h2>
+        </div>
+    </header>
+    <form id="form1" runat="server">
+        <div class="navBarContainer">
+            <nav>
+                <ul class="navBarList">
+                    <li><a class="navBarListItem" href="../RC_Configurator/ConfiguratorHome.aspx">Home</a></li>
+                    <li><a class="navBarListItem">Aircraft Configuration</a></li>
+                    <li><a class="navBarListItem">Components</a></li>
+                    <li><a class="navBarListItem">Add a Component</a></li>
+                    <li class="dropdown">
+                        <a>About</a>
+                        <ul class="sub-menu">
+                            <li><a>About RC Configurator</a></li>
+                            <li><a href="../Personal/Home.aspx">Author Homepage</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <br />
+        <br />
+
+        <div class="contentContainer">
+            <asp:ContentPlaceHolder ID="MainContentPlaceholder" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

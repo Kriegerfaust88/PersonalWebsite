@@ -1,0 +1,75 @@
+﻿body {
+}
+
+h1 {
+    font-family: Arial;
+}
+
+h2 {
+    font-family: Arial;
+}
+
+
+nav {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li {
+        display:inline-block;
+        position: relative;
+    }
+
+    nav li ul {
+        background-color:#333;
+        position: absolute;
+        left: 0;
+        top: 40px;
+        width: 200px;
+    }
+
+    nav li li {
+        position: relative;
+        margin: 0;
+        display:block;
+    }
+
+    nav li li ul {
+        position: absolute;
+        top: 0px;
+        left: 200px;
+        margin:0;
+    }
+
+    nav a {
+        line-height: 40px;
+        padding: 0 12px;
+        margin: 0 12px;
+        color: white;
+        text-decoration: none;
+        display: block;
+    }
+
+.navBarListItem:hover, .dropdown:hover {
+    background-color:red;
+}
+
+   nav li li a {
+       border-bottom: solid 1px black;
+       margin: 0 10px;
+       padding: 0;
+   }
+
+  ul.sub-menu {
+      display: none;
+  }
+
+  .show {
+      display: inline-block;
+  }
