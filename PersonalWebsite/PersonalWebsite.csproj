@@ -103,6 +103,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="scripts\Components.js" />
+    <Content Include="scripts\new_component_scripts\newBatteryValidation.js" />
     <Content Include="styles\ComponentStyle.css" />
     <Content Include="styles\NewComponentStyle.css" />
     <Content Include="web_forms\RC_Configurator\AboutConfigurator.aspx" />

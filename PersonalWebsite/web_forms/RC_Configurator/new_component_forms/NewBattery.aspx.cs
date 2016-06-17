@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.Configuration;
+using System.Web.UI.HtmlControls;
 
 namespace PersonalWebsite.web_forms
 {
@@ -45,6 +46,22 @@ namespace PersonalWebsite.web_forms
                     }
                 }
             }
+
+            else
+            {
+                //Asign visible error messages to the errorList
+                foreach (BaseValidator validator in Page.Validators)
+                {
+                    if (!validator.IsValid)
+                    {
+                        HtmlGenericControl li = new HtmlGenericControl("li");
+                        li.InnerText = validator.Text;
+                        errors.Controls.Add(li);
+                    }
+                }
+            }
+
+
         }
     }
 }

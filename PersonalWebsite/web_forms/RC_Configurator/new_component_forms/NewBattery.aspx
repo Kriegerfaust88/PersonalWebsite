@@ -6,6 +6,13 @@
 <head runat="server">
     <title></title>
     <link href="../../../styles/NewComponentStyle.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .sumbissionControls {
+            height: 51px;
+        }
+    </style>
+    <script src="../../scripts/jquery-2.2.3.js"></script>
+    <script src="../../../scripts/new_component_scripts/newBatteryValidation.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -24,6 +31,7 @@
                         <asp:TextBox ID="nameTextBox" runat="server"></asp:TextBox>
                     </div>
                 </div>
+                &nbsp;&nbsp;&nbsp;
                 <asp:RequiredFieldValidator ID="nameValidator" runat="server" ControlToValidate="nameTextBox" ErrorMessage="Name is required"></asp:RequiredFieldValidator>
                 <div class="paddingDiv"></div>
                 <br />
@@ -35,6 +43,7 @@
                         <asp:TextBox ID="weightTextBox" runat="server"></asp:TextBox>
                     </div>
                 </div>
+                &nbsp;&nbsp;&nbsp;
                 <asp:RequiredFieldValidator ID="WeightValidator" runat="server" ControlToValidate="weightTextBox" ErrorMessage="Weight is required"></asp:RequiredFieldValidator>
                 <div></div>
                 <br />
@@ -46,6 +55,7 @@
                         <asp:TextBox ID="capacityTextBox" runat="server"></asp:TextBox>
                     </div>
                 </div>
+                &nbsp;&nbsp;&nbsp;
                 <asp:RequiredFieldValidator ID="CapacityValidator" runat="server" ControlToValidate="capacityTextBox" ErrorMessage="Capacity is Required"></asp:RequiredFieldValidator>
                 <div></div>
                 <br />
@@ -66,6 +76,7 @@
                         </asp:DropDownList>
                     </div>
                 </div>
+                &nbsp;&nbsp;&nbsp;
                 <asp:RequiredFieldValidator ID="CellConfigValidator" runat="server" ControlToValidate="configDropdown" ErrorMessage="Choose a cell configuration"></asp:RequiredFieldValidator>
                 <div></div>
                 <br />
@@ -77,7 +88,8 @@
                         <asp:TextBox ID="contDischargeTextBox" runat="server"></asp:TextBox>
                     </div>
                 </div>
-                <asp:RequiredFieldValidator ID="ContDischargeValidator" runat="server" ControlToValidate="contDischargeTextBox" ErrorMessage="Continous Discharge Rate is required"></asp:RequiredFieldValidator>
+                &nbsp;&nbsp;&nbsp;
+                <asp:RequiredFieldValidator ID="ContDischargeValidator" runat="server" ControlToValidate="contDischargeTextBox" ErrorMessage="Cont. Discharge Rate is required"></asp:RequiredFieldValidator>
                 <div></div>
                 <br />
                 <div class="fieldContainer">
@@ -88,18 +100,25 @@
                         <asp:TextBox ID="peakDischargeTextBox" runat="server"></asp:TextBox>
                     </div>
                 </div>
+                &nbsp;&nbsp;&nbsp;
                 <asp:RequiredFieldValidator ID="PeakDischargeValidator" runat="server" ControlToValidate="peakDischargeTextBox" ErrorMessage="Peak Discharge Rate is required"></asp:RequiredFieldValidator>
+                <br />
                 <br />
                 <div class="sumbissionControls">
                     <br />
                     <asp:Button ID="submitButton" runat="server" Text="Submit" OnClick="submitButton_Click" />
                 </div>
+                <div style="height: 196px; width: 662px;" class="validationContainer">
+                    <asp:RegularExpressionValidator CssClass="error" ID="weightRegexValidator" runat="server" ControlToValidate="weightTextBox" ErrorMessage="Weight can only contain a numeric value" ValidationExpression="^[0-9]*$"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator CssClass="error" ID="nameRegexValidator" runat="server" ErrorMessage="Name must consist of alphanumeric characters" ControlToValidate="nameTextBox" ValidationExpression="^[a-zA-Z0-9_]*$"></asp:RegularExpressionValidator>
+                    <asp:Panel ID="validatorPanel" runat="server" Height="163px" Width="646px">
+                        <ul id="errors" runat="server">
+                        </ul>
+                    </asp:Panel>
+                </div>
             </div>
             <br />
-
-
         </div>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ComponentsConnectionString %>" ProviderName="<%$ ConnectionStrings:ComponentsConnectionString.ProviderName %>" SelectCommand="SELECT * FROM [Batteries]"></asp:SqlDataSource>
     </form>
-    </body>
+</body>
 </html>
