@@ -16,11 +16,39 @@ namespace PersonalWebsite.web_forms
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            /* HtmlGenericControl errorList = new HtmlGenericControl("ul");
+             errorDiv.Controls.Add(errorList);
 
+             foreach (BaseValidator validator in Page.Validators)
+             {
+                 if (!validator.IsValid)
+                 {
+                     HtmlGenericControl newLi = new HtmlGenericControl("li");
+                     newLi.InnerText = validator.ErrorMessage;
+                     errorList.Controls.Add(newLi);
+                 }
+             }*/
         }
 
         protected void submitButton_Click(object sender, EventArgs e)
         {
+
+            HtmlGenericControl errorList = new HtmlGenericControl("ul");
+            errorDiv.Controls.Add(errorList);
+
+            foreach (BaseValidator validator in Page.Validators)
+            {
+                validator.Validate();
+                if (!validator.IsValid)
+                {
+                    HtmlGenericControl newLi = new HtmlGenericControl("li");
+                    newLi.InnerText = validator.ErrorMessage;
+                    errorList.Controls.Add(newLi);
+                }
+            }
+
+            Page.Validate();
+
             if (IsValid)
             {
                 //Create a new SQL connection using the connection string in Web.config
@@ -47,21 +75,12 @@ namespace PersonalWebsite.web_forms
                 }
             }
 
-            else
-            {
-                //Asign visible error messages to the errorList
-                foreach (BaseValidator validator in Page.Validators)
-                {
-                    if (!validator.IsValid)
-                    {
-                        HtmlGenericControl li = new HtmlGenericControl("li");
-                        li.InnerText = validator.Text;
-                        errors.Controls.Add(li);
-                    }
-                }
-            }
 
+        }
 
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

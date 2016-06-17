@@ -86,3 +86,4 @@ C:\Users\Kriegerfaust\documents\visual studio 2015\Projects\PersonalWebsite\Pers
 C:\Users\Kriegerfaust\documents\visual studio 2015\Projects\PersonalWebsite\PersonalWebsite\bin\zh-Hant\System.Spatial.resources.dll
 C:\Users\Kriegerfaust\documents\visual studio 2015\Projects\PersonalWebsite\PersonalWebsite\obj\Debug\PersonalWebsite.dll
 C:\Users\Kriegerfaust\documents\visual studio 2015\Projects\PersonalWebsite\PersonalWebsite\obj\Debug\PersonalWebsite.pdb
+C:\Users\Kriegerfaust\documents\visual studio 2015\Projects\PersonalWebsite\PersonalWebsite\obj\Debug\PersonalWebsite.csprojResolveAssemblyReference.cache

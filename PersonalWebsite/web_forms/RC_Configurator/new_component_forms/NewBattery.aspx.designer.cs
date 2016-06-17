@@ -193,39 +193,21 @@ namespace PersonalWebsite.web_forms {
         protected global::System.Web.UI.WebControls.Button submitButton;
         
         /// <summary>
-        /// weightRegexValidator control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator weightRegexValidator;
+        protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
-        /// nameRegexValidator control.
+        /// errorDiv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator nameRegexValidator;
-        
-        /// <summary>
-        /// validatorPanel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel validatorPanel;
-        
-        /// <summary>
-        /// errors control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl errors;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl errorDiv;
     }
 }

@@ -8,11 +8,10 @@
     <link href="../../../styles/NewComponentStyle.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         .sumbissionControls {
-            height: 51px;
+            height: auto;
         }
     </style>
-    <script src="../../scripts/jquery-2.2.3.js"></script>
-    <script src="../../../scripts/new_component_scripts/newBatteryValidation.js"></script>
+    
 </head>
 <body>
     <form id="form1" runat="server">
@@ -106,15 +105,12 @@
                 <br />
                 <div class="sumbissionControls">
                     <br />
-                    <asp:Button ID="submitButton" runat="server" Text="Submit" OnClick="submitButton_Click" />
+                    <asp:Button ID="submitButton" runat="server" Text="Submit" OnClick="submitButton_Click" CausesValidation="False" />
+                    <asp:Button ID="Button1" runat="server" CausesValidation="False" OnClick="Button1_Click" Text="Button" />
                 </div>
-                <div style="height: 196px; width: 662px;" class="validationContainer">
-                    <asp:RegularExpressionValidator CssClass="error" ID="weightRegexValidator" runat="server" ControlToValidate="weightTextBox" ErrorMessage="Weight can only contain a numeric value" ValidationExpression="^[0-9]*$"></asp:RegularExpressionValidator>
-                    <asp:RegularExpressionValidator CssClass="error" ID="nameRegexValidator" runat="server" ErrorMessage="Name must consist of alphanumeric characters" ControlToValidate="nameTextBox" ValidationExpression="^[a-zA-Z0-9_]*$"></asp:RegularExpressionValidator>
-                    <asp:Panel ID="validatorPanel" runat="server" Height="163px" Width="646px">
-                        <ul id="errors" runat="server">
-                        </ul>
-                    </asp:Panel>
+                <br />
+                <div id="errorDiv" runat="server">
+                    
                 </div>
             </div>
             <br />
