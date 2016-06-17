@@ -49,6 +49,15 @@ namespace PersonalWebsite.web_forms {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator nameValidator;
         
         /// <summary>
+        /// nameRegexValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator nameRegexValidator;
+        
+        /// <summary>
         /// weightLabel control.
         /// </summary>
         /// <remarks>
@@ -76,6 +85,24 @@ namespace PersonalWebsite.web_forms {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator WeightValidator;
         
         /// <summary>
+        /// weightRegexValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator weightRegexValidator;
+        
+        /// <summary>
+        /// weightRangevalidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator weightRangevalidator;
+        
+        /// <summary>
         /// capacityLabel control.
         /// </summary>
         /// <remarks>
@@ -101,6 +128,15 @@ namespace PersonalWebsite.web_forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator CapacityValidator;
+        
+        /// <summary>
+        /// capacityRegexValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator capacityRegexValidator;
         
         /// <summary>
         /// configurationLabel control.
@@ -191,15 +227,6 @@ namespace PersonalWebsite.web_forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button submitButton;
-        
-        /// <summary>
-        /// Button1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
         /// errorDiv control.

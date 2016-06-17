@@ -16,37 +16,14 @@ namespace PersonalWebsite.web_forms
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            /* HtmlGenericControl errorList = new HtmlGenericControl("ul");
-             errorDiv.Controls.Add(errorList);
-
-             foreach (BaseValidator validator in Page.Validators)
-             {
-                 if (!validator.IsValid)
-                 {
-                     HtmlGenericControl newLi = new HtmlGenericControl("li");
-                     newLi.InnerText = validator.ErrorMessage;
-                     errorList.Controls.Add(newLi);
-                 }
-             }*/
         }
 
         protected void submitButton_Click(object sender, EventArgs e)
         {
+            //If there are any validation errors, this method displays them at the bottom of the form
+            showValidationErrors();
 
-            HtmlGenericControl errorList = new HtmlGenericControl("ul");
-            errorDiv.Controls.Add(errorList);
-
-            foreach (BaseValidator validator in Page.Validators)
-            {
-                validator.Validate();
-                if (!validator.IsValid)
-                {
-                    HtmlGenericControl newLi = new HtmlGenericControl("li");
-                    newLi.InnerText = validator.ErrorMessage;
-                    errorList.Controls.Add(newLi);
-                }
-            }
-
+            //Validate the page
             Page.Validate();
 
             if (IsValid)
@@ -74,13 +51,30 @@ namespace PersonalWebsite.web_forms
                     }
                 }
             }
-
-
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            
+        protected void showValidationErrors()
+        {     
+            //Insert a new message and a list under the Submit button to house validation error messages
+            HtmlGenericControl errorListMessage = new HtmlGenericControl("p");
+            errorListMessage.InnerText = "Please fix the following errors before submitting:";
+            errorDiv.Controls.Add(errorListMessage);
+        
+            HtmlGenericControl errorList = new HtmlGenericControl("ul");
+            errorDiv.Controls.Add(errorList);
+
+            //Iterate through each validator on the page and validate them individually           
+            foreach (BaseValidator validator in Page.Validators)
+            {
+                validator.Validate();
+                //If the validator is not valid, add the error message to the errorList in errorDiv
+                if (!validator.IsValid)
+                {
+                    HtmlGenericControl newLi = new HtmlGenericControl("li");
+                    newLi.InnerText = validator.ErrorMessage;
+                    errorList.Controls.Add(newLi);
+                }
+            }
         }
     }
 }
