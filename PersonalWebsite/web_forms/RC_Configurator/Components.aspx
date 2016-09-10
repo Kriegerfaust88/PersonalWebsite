@@ -16,7 +16,7 @@
 
         #PopupFrame {
             height: 500px;
-            width: 600px;
+            width: 450px;
         }
 
         .modalPopup {
@@ -29,7 +29,7 @@
 
 
     <asp:Panel ID="pnlPopup" runat="server" Style="display: none; width: auto; height: auto" CssClass="modalPopup">
-        <iframe id="PopupFrame" ></iframe>
+        <iframe id="PopupFrame"></iframe>
         <br />
         <asp:Button ID="cancelButton" runat="server" Text="Cancel" />
     </asp:Panel>
