@@ -10,6 +10,18 @@
         .sumbissionControls {
             height: auto;
         }
+        #mainContent {
+            width: auto;
+        }
+        #form1 {
+            width: auto;
+            height: auto;
+        }
+        div {
+            width:auto;
+            height: auto;
+        }
+
     </style>
     
 </head>
@@ -17,7 +29,7 @@
     <form id="form1" runat="server">
         <div id="mainContent">
             <div id="heading">
-                <h1>New Battery</h1>
+                <h1 style="width: 427px">New Battery</h1>
             </div>
             <div id="formContainer">
                 <br />
@@ -44,8 +56,7 @@
                 </div>
                 &nbsp;&nbsp;&nbsp;
                 <asp:RequiredFieldValidator ID="WeightValidator" runat="server" ControlToValidate="weightTextBox" ErrorMessage="Weight is required" style="display:none"></asp:RequiredFieldValidator>
-                <asp:RegularExpressionValidator ID="weightRegexValidator" runat="server" ControlToValidate="weightTextBox" ErrorMessage="Weight must be a numeric value with no decimals" ValidationExpression="^[0-9]*$" style="display:none"></asp:RegularExpressionValidator>
-                <asp:RangeValidator ID="weightRangevalidator" runat="server" ControlToValidate="weightTextBox" ErrorMessage="Weight must be a value from 1 - 1500" MaximumValue="1500" MinimumValue="1" style="display:none"></asp:RangeValidator>
+                <asp:RegularExpressionValidator ID="weightRegexValidator" runat="server" ControlToValidate="weightTextBox" ErrorMessage="Weight must be a numeric value (decimals allowed)" ValidationExpression="[0-9]+(\.[0-9][0-9]?)?" style="display:none"></asp:RegularExpressionValidator>
                 <div></div>
                 <br />
                 <div class="fieldContainer">

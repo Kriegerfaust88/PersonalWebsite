@@ -21,7 +21,7 @@ namespace PersonalWebsite.web_forms
         protected void submitButton_Click(object sender, EventArgs e)
         {
             //If there are any validation errors, this method displays them at the bottom of the form
-            showValidationErrors();
+            
 
             //Validate the page
             Page.Validate();
@@ -49,7 +49,10 @@ namespace PersonalWebsite.web_forms
                         cmd.ExecuteNonQuery();
                         con.Close();
                     }
-                }
+                }    
+            } else
+            {
+                showValidationErrors();
             }
         }
 
