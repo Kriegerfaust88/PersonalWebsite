@@ -6,6 +6,25 @@
 <head runat="server">
     <title></title>
     <link href="../../../styles/NewComponentStyle.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .sumbissionControls {
+            height: auto;
+        }
+
+        #mainContent {
+            width: 488px;
+        }
+
+        #form1 {
+            width: auto;
+            height: auto;
+        }
+
+        div {
+            width: auto;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -15,7 +34,6 @@
             </div>
             <div id="formContainer">
                 <br />
-
                 <div class="fieldContainer">
                     <div class="labelContainer">
                         <asp:Label ID="nameLabel" runat="server" Text="Name: "></asp:Label>
@@ -24,8 +42,7 @@
                         <asp:TextBox ID="nameTextBox" runat="server"></asp:TextBox>
                     </div>
                 </div>
-                <asp:RequiredFieldValidator ID="nameValidator" runat="server" ControlToValidate="nameTextBox" ErrorMessage="Name is required"></asp:RequiredFieldValidator>
-                <div class="paddingDiv"></div>
+                <div></div>
                 <br />
                 <div class="fieldContainer">
                     <div class="labelContainer">
@@ -35,7 +52,6 @@
                         <asp:TextBox ID="weightTextBox" runat="server"></asp:TextBox>
                     </div>
                 </div>
-                <asp:RequiredFieldValidator ID="WeightValidator" runat="server" ControlToValidate="weightTextBox" ErrorMessage="Weight is required"></asp:RequiredFieldValidator>
                 <div></div>
                 <br />
                 <div class="fieldContainer">
@@ -46,7 +62,6 @@
                         <asp:TextBox ID="kvTextBox" runat="server"></asp:TextBox>
                     </div>
                 </div>
-                <asp:RequiredFieldValidator ID="kvValidator" runat="server" ControlToValidate="kvTextBox" ErrorMessage="Speed is Required"></asp:RequiredFieldValidator>
                 <div></div>
                 <br />
                 <div class="fieldContainer">
@@ -58,7 +73,6 @@
                     </div>
 
                 </div>
-                <asp:RequiredFieldValidator ID="maxCurrentValidator" runat="server" ControlToValidate="maxCurrentTextBox" ErrorMessage="Max Current is Required"></asp:RequiredFieldValidator>
                 <div></div>
                 <br />
                 <div class="fieldContainer">
@@ -69,7 +83,6 @@
                         <asp:TextBox ID="maxVoltageTextBox" runat="server"></asp:TextBox>
                     </div>
                 </div>
-                <asp:RequiredFieldValidator ID="maxVoltageValidator" runat="server" ControlToValidate="maxVoltageTextBox" ErrorMessage="Max Voltage is Required"></asp:RequiredFieldValidator>
                 <div></div>
                 <br />
                 <div class="fieldContainer">
@@ -89,7 +102,6 @@
                         </asp:DropDownList>
                     </div>
                 </div>
-                <asp:RequiredFieldValidator ID="minCellValidator" runat="server" ControlToValidate="minCellDropdown" ErrorMessage="Minimum Cell is Required"></asp:RequiredFieldValidator>
                 <div></div>
                 <br />
                 <div class="fieldContainer">
@@ -109,7 +121,6 @@
                         </asp:DropDownList>
                     </div>
                 </div>
-                <asp:RequiredFieldValidator ID="maxCellValidator" runat="server" ControlToValidate="maxCellDropdown" ErrorMessage="Maximum Cell is Required"></asp:RequiredFieldValidator>
                 <div></div>
                 <br />
                 <div class="fieldContainer">
@@ -120,7 +131,6 @@
                         <asp:TextBox ID="reqEscAmpsTextBox" runat="server"></asp:TextBox>
                     </div>
                 </div>
-                <asp:RequiredFieldValidator ID="reqEscCurrentValidator" runat="server" ControlToValidate="reqEscAmpsTextBox" ErrorMessage="ESC Current is Required"></asp:RequiredFieldValidator>
                 <div></div>
                 <br />
                 <div class="fieldContainer">
@@ -131,19 +141,28 @@
                         <asp:TextBox ID="maxPowerTextBox" runat="server"></asp:TextBox>
                     </div>
                 </div>
-                <asp:RequiredFieldValidator ID="maxPowerValidator" runat="server" ControlToValidate="maxPowerTextBox" ErrorMessage="Max. Power is Required"></asp:RequiredFieldValidator>
                 <br />
                 <br />
-
                 <div class="sumbissionControls">
-                    <asp:Button ID="submitButton" runat="server" Text="Submit" OnClick="submitButton_Click" />
+                    <asp:Button ID="submitButton" runat="server" Text="Submit" OnClick="submitButton_Click" CausesValidation="False" />
+                </div>
+                <br />
+                <div id="errorDiv" runat="server">
                 </div>
             </div>
             <br />
-
-
         </div>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ComponentsConnectionString %>" ProviderName="<%$ ConnectionStrings:ComponentsConnectionString.ProviderName %>" SelectCommand="SELECT * FROM [Batteries]"></asp:SqlDataSource>
+        <div id="validators">
+            <asp:RequiredFieldValidator ID="maxCellValidator" runat="server" ControlToValidate="maxCellDropdown" ErrorMessage="Maximum Cell is Required" Display="None"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="maxPowerValidator" runat="server" ControlToValidate="maxPowerTextBox" ErrorMessage="Max. Power is Required" Display="None"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="reqEscCurrentValidator" runat="server" ControlToValidate="reqEscAmpsTextBox" ErrorMessage="ESC Current is Required" Display="None"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="minCellValidator" runat="server" ControlToValidate="minCellDropdown" ErrorMessage="Minimum Cell is Required" Display="None"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="maxVoltageValidator" runat="server" ControlToValidate="maxVoltageTextBox" ErrorMessage="Max Voltage is Required" Display="None"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="maxCurrentValidator" runat="server" ControlToValidate="maxCurrentTextBox" ErrorMessage="Max Current is Required" Display="None"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="WeightValidator" runat="server" ControlToValidate="weightTextBox" ErrorMessage="Weight is required" Display="None"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="nameValidator" runat="server" ControlToValidate="nameTextBox" ErrorMessage="Name is required" Display="None"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="kvValidator" runat="server" ControlToValidate="kvTextBox" ErrorMessage="Speed is Required" Display="None"></asp:RequiredFieldValidator>
+        </div>
     </form>
 </body>
 </html>

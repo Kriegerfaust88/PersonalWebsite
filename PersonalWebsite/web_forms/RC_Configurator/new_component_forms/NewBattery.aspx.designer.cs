@@ -40,24 +40,6 @@ namespace PersonalWebsite.web_forms {
         protected global::System.Web.UI.WebControls.TextBox nameTextBox;
         
         /// <summary>
-        /// nameValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator nameValidator;
-        
-        /// <summary>
-        /// nameRegexValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator nameRegexValidator;
-        
-        /// <summary>
         /// weightLabel control.
         /// </summary>
         /// <remarks>
@@ -74,24 +56,6 @@ namespace PersonalWebsite.web_forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox weightTextBox;
-        
-        /// <summary>
-        /// WeightValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator WeightValidator;
-        
-        /// <summary>
-        /// weightRegexValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator weightRegexValidator;
         
         /// <summary>
         /// capacityLabel control.
@@ -112,24 +76,6 @@ namespace PersonalWebsite.web_forms {
         protected global::System.Web.UI.WebControls.TextBox capacityTextBox;
         
         /// <summary>
-        /// CapacityValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator CapacityValidator;
-        
-        /// <summary>
-        /// capacityRegexValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator capacityRegexValidator;
-        
-        /// <summary>
         /// configurationLabel control.
         /// </summary>
         /// <remarks>
@@ -146,15 +92,6 @@ namespace PersonalWebsite.web_forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList configDropdown;
-        
-        /// <summary>
-        /// CellConfigValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator CellConfigValidator;
         
         /// <summary>
         /// contDischargeLabel control.
@@ -175,15 +112,6 @@ namespace PersonalWebsite.web_forms {
         protected global::System.Web.UI.WebControls.TextBox contDischargeTextBox;
         
         /// <summary>
-        /// ContDischargeValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator ContDischargeValidator;
-        
-        /// <summary>
         /// peakDischargeLabel control.
         /// </summary>
         /// <remarks>
@@ -202,15 +130,6 @@ namespace PersonalWebsite.web_forms {
         protected global::System.Web.UI.WebControls.TextBox peakDischargeTextBox;
         
         /// <summary>
-        /// PeakDischargeValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator PeakDischargeValidator;
-        
-        /// <summary>
         /// submitButton control.
         /// </summary>
         /// <remarks>
@@ -227,5 +146,86 @@ namespace PersonalWebsite.web_forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl errorDiv;
+        
+        /// <summary>
+        /// nameValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator nameValidator;
+        
+        /// <summary>
+        /// nameRegexValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator nameRegexValidator;
+        
+        /// <summary>
+        /// WeightValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator WeightValidator;
+        
+        /// <summary>
+        /// weightRegexValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator weightRegexValidator;
+        
+        /// <summary>
+        /// CapacityValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator CapacityValidator;
+        
+        /// <summary>
+        /// capacityRegexValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator capacityRegexValidator;
+        
+        /// <summary>
+        /// CellConfigValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator CellConfigValidator;
+        
+        /// <summary>
+        /// ContDischargeValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ContDischargeValidator;
+        
+        /// <summary>
+        /// PeakDischargeValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator PeakDischargeValidator;
     }
 }

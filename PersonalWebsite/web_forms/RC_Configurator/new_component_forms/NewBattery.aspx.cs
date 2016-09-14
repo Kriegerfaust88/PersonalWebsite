@@ -8,6 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.Configuration;
 using System.Web.UI.HtmlControls;
+using PersonalWebsite.web_forms.RC_Configurator.new_component_forms;
 
 namespace PersonalWebsite.web_forms
 {
@@ -20,9 +21,6 @@ namespace PersonalWebsite.web_forms
 
         protected void submitButton_Click(object sender, EventArgs e)
         {
-            //If there are any validation errors, this method displays them at the bottom of the form
-            
-
             //Validate the page
             Page.Validate();
 
@@ -31,7 +29,6 @@ namespace PersonalWebsite.web_forms
                 //Create a new SQL connection using the connection string in Web.config
                 SqlConnection con = new SqlConnection(
                     WebConfigurationManager.ConnectionStrings["ComponentsConnectionString"].ConnectionString);
-
                 using (con)
                 {
                     //Create a new SQL command with parameteres for inserting into Batteries table of Components database
@@ -49,34 +46,11 @@ namespace PersonalWebsite.web_forms
                         cmd.ExecuteNonQuery();
                         con.Close();
                     }
-                }    
-            } else
-            {
-                showValidationErrors();
-            }
-        }
-
-        protected void showValidationErrors()
-        {     
-            //Insert a new message and a list under the Submit button to house validation error messages
-            HtmlGenericControl errorListMessage = new HtmlGenericControl("p");
-            errorListMessage.InnerText = "Please fix the following errors before submitting:";
-            errorDiv.Controls.Add(errorListMessage);
-        
-            HtmlGenericControl errorList = new HtmlGenericControl("ul");
-            errorDiv.Controls.Add(errorList);
-
-            //Iterate through each validator on the page and validate them individually           
-            foreach (BaseValidator validator in Page.Validators)
-            {
-                validator.Validate();
-                //If the validator is not valid, add the error message to the errorList in errorDiv
-                if (!validator.IsValid)
-                {
-                    HtmlGenericControl newLi = new HtmlGenericControl("li");
-                    newLi.InnerText = validator.ErrorMessage;
-                    errorList.Controls.Add(newLi);
                 }
+            }
+            else
+            {
+                NewComponentValidation.showValidationErrors(errorDiv, Page);
             }
         }
     }

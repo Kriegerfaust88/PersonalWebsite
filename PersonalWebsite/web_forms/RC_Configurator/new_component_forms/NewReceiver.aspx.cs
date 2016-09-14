@@ -18,6 +18,8 @@ namespace PersonalWebsite.web_forms.RC_Configurator.new_component_forms
 
         protected void submitButton_Click(object sender, EventArgs e)
         {
+            Page.Validate();
+
             if (IsValid)
             {
                 //Create a new SQL connection using the connection string in Web.config
@@ -41,6 +43,9 @@ namespace PersonalWebsite.web_forms.RC_Configurator.new_component_forms
                         con.Close();
                     }
                 }
+            } else
+            {
+                NewComponentValidation.showValidationErrors(errorDiv, Page);
             }
         }
     }

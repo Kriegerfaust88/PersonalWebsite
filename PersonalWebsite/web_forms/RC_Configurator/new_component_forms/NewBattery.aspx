@@ -10,20 +10,21 @@
         .sumbissionControls {
             height: auto;
         }
+
         #mainContent {
             width: auto;
         }
+
         #form1 {
             width: auto;
             height: auto;
         }
+
         div {
-            width:auto;
+            width: auto;
             height: auto;
         }
-
     </style>
-    
 </head>
 <body>
     <form id="form1" runat="server">
@@ -42,8 +43,7 @@
                     </div>
                 </div>
                 &nbsp;&nbsp;&nbsp;
-                <asp:RequiredFieldValidator ID="nameValidator" runat="server" ControlToValidate="nameTextBox" ErrorMessage="Name is required" style="display:none"></asp:RequiredFieldValidator>
-                <asp:RegularExpressionValidator ID="nameRegexValidator" runat="server" ControlToValidate="nameTextBox" ErrorMessage="Name must consist only of alphanumeric characters" style="display:none" ValidationExpression="^[a-zA-Z0-9]*$"></asp:RegularExpressionValidator>
+               
                 <div class="paddingDiv"></div>
                 <br />
                 <div class="fieldContainer">
@@ -55,8 +55,7 @@
                     </div>
                 </div>
                 &nbsp;&nbsp;&nbsp;
-                <asp:RequiredFieldValidator ID="WeightValidator" runat="server" ControlToValidate="weightTextBox" ErrorMessage="Weight is required" style="display:none"></asp:RequiredFieldValidator>
-                <asp:RegularExpressionValidator ID="weightRegexValidator" runat="server" ControlToValidate="weightTextBox" ErrorMessage="Weight must be a numeric value (decimals allowed)" ValidationExpression="[0-9]+(\.[0-9][0-9]?)?" style="display:none"></asp:RegularExpressionValidator>
+               
                 <div></div>
                 <br />
                 <div class="fieldContainer">
@@ -68,8 +67,7 @@
                     </div>
                 </div>
                 &nbsp;&nbsp;&nbsp;
-                <asp:RequiredFieldValidator ID="CapacityValidator" runat="server" ControlToValidate="capacityTextBox" ErrorMessage="Capacity is Required" style="display:none"></asp:RequiredFieldValidator>
-                <asp:RegularExpressionValidator ID="capacityRegexValidator" runat="server" ControlToValidate="capacityTextBox" ErrorMessage="Capacity must be a numeric value" ValidationExpression="^[0-9]*$" style="display:none"></asp:RegularExpressionValidator>
+               
                 <div></div>
                 <br />
                 <div class="fieldContainer">
@@ -90,7 +88,7 @@
                     </div>
                 </div>
                 &nbsp;&nbsp;&nbsp;
-                <asp:RequiredFieldValidator ID="CellConfigValidator" runat="server" ControlToValidate="configDropdown" ErrorMessage="Choose a cell configuration" style="display:none"></asp:RequiredFieldValidator>
+               
                 <div></div>
                 <br />
                 <div class="fieldContainer">
@@ -102,7 +100,7 @@
                     </div>
                 </div>
                 &nbsp;&nbsp;&nbsp;
-                <asp:RequiredFieldValidator ID="ContDischargeValidator" runat="server" ControlToValidate="contDischargeTextBox" ErrorMessage="Continuous Discharge Rate is required" style="display:none"></asp:RequiredFieldValidator>
+               
                 <div></div>
                 <br />
                 <div class="fieldContainer">
@@ -114,7 +112,7 @@
                     </div>
                 </div>
                 &nbsp;&nbsp;&nbsp;
-                <asp:RequiredFieldValidator ID="PeakDischargeValidator" runat="server" ControlToValidate="peakDischargeTextBox" ErrorMessage="Peak Discharge Rate is required" style="display:none"></asp:RequiredFieldValidator>
+               
                 <br />
                 <br />
                 <div class="sumbissionControls">
@@ -123,10 +121,20 @@
                 </div>
                 <br />
                 <div id="errorDiv" runat="server">
-                    
                 </div>
             </div>
             <br />
+        </div>
+        <div id="validators">
+            <asp:RequiredFieldValidator ID="nameValidator" runat="server" ControlToValidate="nameTextBox" ErrorMessage="Name is required" Style="display: none"></asp:RequiredFieldValidator>
+            <asp:RegularExpressionValidator ID="nameRegexValidator" runat="server" ControlToValidate="nameTextBox" ErrorMessage="Name must consist only of alphanumeric characters" Style="display: none" ValidationExpression="^[a-zA-Z0-9]*$"></asp:RegularExpressionValidator>
+            <asp:RequiredFieldValidator ID="WeightValidator" runat="server" ControlToValidate="weightTextBox" ErrorMessage="Weight is required" Style="display: none"></asp:RequiredFieldValidator>
+            <asp:RegularExpressionValidator ID="weightRegexValidator" runat="server" ControlToValidate="weightTextBox" ErrorMessage="Weight must be a numeric value (decimals allowed)" ValidationExpression="[0-9]+(\.[0-9][0-9]?)?" Style="display: none"></asp:RegularExpressionValidator>
+            <asp:RequiredFieldValidator ID="CapacityValidator" runat="server" ControlToValidate="capacityTextBox" ErrorMessage="Capacity is Required" Style="display: none"></asp:RequiredFieldValidator>
+            <asp:RegularExpressionValidator ID="capacityRegexValidator" runat="server" ControlToValidate="capacityTextBox" ErrorMessage="Capacity must be a numeric value" ValidationExpression="^[0-9]*$" Style="display: none"></asp:RegularExpressionValidator>
+            <asp:RequiredFieldValidator ID="CellConfigValidator" runat="server" ControlToValidate="configDropdown" ErrorMessage="Choose a cell configuration" Style="display: none"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="ContDischargeValidator" runat="server" ControlToValidate="contDischargeTextBox" ErrorMessage="Continuous Discharge Rate is required" Style="display: none"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="PeakDischargeValidator" runat="server" ControlToValidate="peakDischargeTextBox" ErrorMessage="Peak Discharge Rate is required" Style="display: none"></asp:RequiredFieldValidator>
         </div>
     </form>
 </body>

@@ -40,15 +40,6 @@ namespace PersonalWebsite.web_forms.RC_Configurator.new_component_forms {
         protected global::System.Web.UI.WebControls.TextBox nameTextBox;
         
         /// <summary>
-        /// nameValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator nameValidator;
-        
-        /// <summary>
         /// weightLabel control.
         /// </summary>
         /// <remarks>
@@ -65,15 +56,6 @@ namespace PersonalWebsite.web_forms.RC_Configurator.new_component_forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox weightTextBox;
-        
-        /// <summary>
-        /// WeightValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator WeightValidator;
         
         /// <summary>
         /// channelCountLabel control.
@@ -94,15 +76,6 @@ namespace PersonalWebsite.web_forms.RC_Configurator.new_component_forms {
         protected global::System.Web.UI.WebControls.DropDownList channelCountDropdown;
         
         /// <summary>
-        /// channelValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator channelValidator;
-        
-        /// <summary>
         /// minVoltageLabel control.
         /// </summary>
         /// <remarks>
@@ -119,15 +92,6 @@ namespace PersonalWebsite.web_forms.RC_Configurator.new_component_forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox minVoltageTextBox;
-        
-        /// <summary>
-        /// minVoltageValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator minVoltageValidator;
         
         /// <summary>
         /// maxVoltageLabel control.
@@ -148,15 +112,6 @@ namespace PersonalWebsite.web_forms.RC_Configurator.new_component_forms {
         protected global::System.Web.UI.WebControls.TextBox maxVoltageTextBox;
         
         /// <summary>
-        /// maxVoltageValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator maxVoltageValidator;
-        
-        /// <summary>
         /// submitButton control.
         /// </summary>
         /// <remarks>
@@ -164,5 +119,59 @@ namespace PersonalWebsite.web_forms.RC_Configurator.new_component_forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button submitButton;
+        
+        /// <summary>
+        /// errorDiv control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl errorDiv;
+        
+        /// <summary>
+        /// nameValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator nameValidator;
+        
+        /// <summary>
+        /// weightValidtator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator weightValidtator;
+        
+        /// <summary>
+        /// channelValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator channelValidator;
+        
+        /// <summary>
+        /// minVoltageValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator minVoltageValidator;
+        
+        /// <summary>
+        /// maxVoltageValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator maxVoltageValidator;
     }
 }

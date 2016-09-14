@@ -40,15 +40,6 @@ namespace PersonalWebsite.web_forms.RC_Configurator.new_component_forms {
         protected global::System.Web.UI.WebControls.TextBox nameTextBox;
         
         /// <summary>
-        /// nameValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator nameValidator;
-        
-        /// <summary>
         /// weightLabel control.
         /// </summary>
         /// <remarks>
@@ -65,15 +56,6 @@ namespace PersonalWebsite.web_forms.RC_Configurator.new_component_forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox weightTextBox;
-        
-        /// <summary>
-        /// WeightValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator WeightValidator;
         
         /// <summary>
         /// bladeLengthLabel control.
@@ -94,15 +76,6 @@ namespace PersonalWebsite.web_forms.RC_Configurator.new_component_forms {
         protected global::System.Web.UI.WebControls.TextBox bladeLengthTextBox;
         
         /// <summary>
-        /// bladeLengthValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator bladeLengthValidator;
-        
-        /// <summary>
         /// bladePitchLabel control.
         /// </summary>
         /// <remarks>
@@ -119,15 +92,6 @@ namespace PersonalWebsite.web_forms.RC_Configurator.new_component_forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox bladePitchTextBox;
-        
-        /// <summary>
-        /// bladePitchValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator bladePitchValidator;
         
         /// <summary>
         /// bladeCountLabel control.
@@ -148,15 +112,6 @@ namespace PersonalWebsite.web_forms.RC_Configurator.new_component_forms {
         protected global::System.Web.UI.WebControls.DropDownList bladeCountDropdown;
         
         /// <summary>
-        /// bladeCountValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator bladeCountValidator;
-        
-        /// <summary>
         /// submitButton control.
         /// </summary>
         /// <remarks>
@@ -166,12 +121,57 @@ namespace PersonalWebsite.web_forms.RC_Configurator.new_component_forms {
         protected global::System.Web.UI.WebControls.Button submitButton;
         
         /// <summary>
-        /// SqlDataSource1 control.
+        /// errorDiv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl errorDiv;
+        
+        /// <summary>
+        /// nameValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator nameValidator;
+        
+        /// <summary>
+        /// WeightValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator WeightValidator;
+        
+        /// <summary>
+        /// bladeLengthValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator bladeLengthValidator;
+        
+        /// <summary>
+        /// bladePitchValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator bladePitchValidator;
+        
+        /// <summary>
+        /// bladeCountValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator bladeCountValidator;
     }
 }
