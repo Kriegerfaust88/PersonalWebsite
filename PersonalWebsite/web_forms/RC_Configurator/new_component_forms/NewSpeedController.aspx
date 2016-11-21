@@ -24,7 +24,6 @@
                         <asp:TextBox ID="nameTextBox" runat="server"></asp:TextBox>
                     </div>
                 </div>
-                <asp:RequiredFieldValidator ID="nameValidator" runat="server" ControlToValidate="nameTextBox" ErrorMessage="Name is required"></asp:RequiredFieldValidator>
                 <div class="paddingDiv"></div>
                 <br />
                 <div class="fieldContainer">
@@ -35,7 +34,6 @@
                         <asp:TextBox ID="weightTextBox" runat="server"></asp:TextBox>
                     </div>
                 </div>
-                <asp:RequiredFieldValidator ID="WeightValidator" runat="server" ControlToValidate="weightTextBox" ErrorMessage="Weight is required"></asp:RequiredFieldValidator>
                 <br />
                 <div></div>
                 <br />
@@ -47,7 +45,6 @@
                         <asp:TextBox ID="constCurrentTextBox" runat="server"></asp:TextBox>
                     </div>
                 </div>
-                <asp:RequiredFieldValidator ID="constCurrentValidator" runat="server" ControlToValidate="constCurrentTextBox" ErrorMessage="Constant Current is required"></asp:RequiredFieldValidator>
                 <div></div>
                 <br />
                 <div class="fieldContainer">
@@ -58,7 +55,6 @@
                         <asp:TextBox ID="burstCurrentTextBox" runat="server"></asp:TextBox>
                     </div>
                 </div>
-                <asp:RequiredFieldValidator ID="burstCurrentValidator" runat="server" ErrorMessage="Burst Current is required" ControlToValidate="burstCurrentTextBox"></asp:RequiredFieldValidator>
                 <div></div>
                 <br />
                 <div class="fieldContainer">
@@ -78,7 +74,6 @@
                         </asp:DropDownList>
                     </div>
                 </div>
-                <asp:RequiredFieldValidator ID="minCellValidator" runat="server" ErrorMessage="Min. Cell is required" ControlToValidate="minCellDropdown"></asp:RequiredFieldValidator>
                 <div></div>
                 <br />
                 <div class="fieldContainer">
@@ -98,7 +93,6 @@
                         </asp:DropDownList>
                     </div>
                 </div>
-                <asp:RequiredFieldValidator ID="maxCellValidator" runat="server" ErrorMessage="Max. Cell is required" ControlToValidate="maxCellDropdown"></asp:RequiredFieldValidator>
                 <div></div>
                 <br />
                 <div class="fieldContainer">
@@ -111,22 +105,28 @@
                             <asp:ListItem>No BEC</asp:ListItem>
                             <asp:ListItem>BEC</asp:ListItem>
                         </asp:DropDownList>
-
                     </div>
                 </div>
-
-                <asp:RequiredFieldValidator ID="circuitValidator" runat="server" ControlToValidate="circuitDropdown" ErrorMessage="Circuit Type is required"></asp:RequiredFieldValidator>
                 <br />
                 <div class="sumbissionControls">
                     <br />
-                    <asp:Button ID="submitButton" runat="server" Text="Submit" OnClick="submitButton_Click" />
+                    <asp:Button ID="submitButton" runat="server" Text="Submit" OnClick="submitButton_Click" CausesValidation="False" />
+                </div>
+                <div id ="errorDiv" runat="server">
+
                 </div>
             </div>
             <br />
-
-
         </div>
-
+        <div id="validators">
+            <asp:RequiredFieldValidator ID="nameValidator" runat="server" ControlToValidate="nameTextBox" ErrorMessage="Name is required"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="WeightValidator" runat="server" ControlToValidate="weightTextBox" ErrorMessage="Weight is required"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="constCurrentValidator" runat="server" ControlToValidate="constCurrentTextBox" ErrorMessage="Constant Current is required"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="burstCurrentValidator" runat="server" ErrorMessage="Burst Current is required" ControlToValidate="burstCurrentTextBox"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="minCellValidator" runat="server" ErrorMessage="Min. Cell is required" ControlToValidate="minCellDropdown"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="maxCellValidator" runat="server" ErrorMessage="Max. Cell is required" ControlToValidate="maxCellDropdown"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="circuitValidator" runat="server" ControlToValidate="circuitDropdown" ErrorMessage="Circuit Type is required"></asp:RequiredFieldValidator>
+        </div>
     </form>
 </body>
 </html>

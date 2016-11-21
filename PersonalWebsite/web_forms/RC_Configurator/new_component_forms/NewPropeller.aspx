@@ -15,7 +15,6 @@
             </div>
             <div id="formContainer">
                 <br />
-
                 <div class="fieldContainer">
                     <div class="labelContainer">
                         <asp:Label ID="nameLabel" runat="server" Text="Name: "></asp:Label>
@@ -24,7 +23,6 @@
                         <asp:TextBox ID="nameTextBox" runat="server"></asp:TextBox>
                     </div>
                 </div>
-                <asp:RequiredFieldValidator ID="nameValidator" runat="server" ControlToValidate="nameTextBox" ErrorMessage="Name is required"></asp:RequiredFieldValidator>
                 <div class="paddingDiv"></div>
                 <br />
                 <div class="fieldContainer">
@@ -35,7 +33,6 @@
                         <asp:TextBox ID="weightTextBox" runat="server"></asp:TextBox>
                     </div>
                 </div>
-                <asp:RequiredFieldValidator ID="WeightValidator" runat="server" ControlToValidate="weightTextBox" ErrorMessage="Weight is required"></asp:RequiredFieldValidator>
                 <div></div>
                 <br />
                 <div class="fieldContainer">
@@ -46,7 +43,6 @@
                         <asp:TextBox ID="bladeLengthTextBox" runat="server"></asp:TextBox>
                     </div>
                 </div>
-                <asp:RequiredFieldValidator ID="bladeLengthValidator" runat="server" ControlToValidate="bladeLengthTextBox" ErrorMessage="Blade Length is required"></asp:RequiredFieldValidator>
                 <div></div>
                 <br />
                 <div class="fieldContainer">
@@ -56,9 +52,7 @@
                     <div class="inputContainer">
                         <asp:TextBox ID="bladePitchTextBox" runat="server"></asp:TextBox>
                     </div>
-
                 </div>
-                <asp:RequiredFieldValidator ID="bladePitchValidator" runat="server" ControlToValidate="bladePitchTextBox" ErrorMessage="Blade Pitch is required"></asp:RequiredFieldValidator>
                 <div></div>
                 <br />
                 <div class="fieldContainer">
@@ -74,22 +68,27 @@
                             <asp:ListItem>5</asp:ListItem>
                         </asp:DropDownList>
                     </div>
-
                 </div>
-                <asp:RequiredFieldValidator ID="bladeCountValidator" runat="server" ControlToValidate="bladeCountDropdown" ErrorMessage="Blade Count is required"></asp:RequiredFieldValidator>
                 <br />
                 <br />
                 <br />
-
                 <div class="sumbissionControls">
-                    <asp:Button ID="submitButton" runat="server" Text="Submit" OnClick="submitButton_Click" />
+                    <asp:Button ID="submitButton" runat="server" Text="Submit" OnClick="submitButton_Click" CausesValidation="False" />
+                </div>
+                <div id="errorDiv" runat="server">
+
                 </div>
             </div>
             <br />
-
-
         </div>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ComponentsConnectionString %>" ProviderName="<%$ ConnectionStrings:ComponentsConnectionString.ProviderName %>" SelectCommand="SELECT * FROM [Batteries]"></asp:SqlDataSource>
+        <div id="validators">
+        <asp:RequiredFieldValidator ID="nameValidator" runat="server" ControlToValidate="nameTextBox" ErrorMessage="Name is required"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="WeightValidator" runat="server" ControlToValidate="weightTextBox" ErrorMessage="Weight is required"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="bladeLengthValidator" runat="server" ControlToValidate="bladeLengthTextBox" ErrorMessage="Blade Length is required"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="bladePitchValidator" runat="server" ControlToValidate="bladePitchTextBox" ErrorMessage="Blade Pitch is required"></asp:RequiredFieldValidator>
+        <asp:RequiredFieldValidator ID="bladeCountValidator" runat="server" ControlToValidate="bladeCountDropdown" ErrorMessage="Blade Count is required"></asp:RequiredFieldValidator>
+    </div>
     </form>
+    
 </body>
 </html>

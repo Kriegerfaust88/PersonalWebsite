@@ -17,7 +17,7 @@ namespace PersonalWebsite.web_forms.RC_Configurator
             {
                 MPE.Hide();
             }
-        }    
+        }
 
         protected void LoadGridView(object sender, EventArgs e)
         {
@@ -61,9 +61,12 @@ namespace PersonalWebsite.web_forms.RC_Configurator
         }
 
         protected void AddNewButton_Click(object sender, EventArgs e)
-        {       
-            //Call the show method of the Modal Popup Extender to display the New Component Popup          
-            MPE.Show();
+        {
+            /*
+            Call the show method of the Modal Popup Extender to display the New Component Popup unless the
+            selected value of the component select dropdown is the default
+            */  
+                MPE.Show();
         }
     }
 }

@@ -6,16 +6,34 @@
 <head runat="server">
     <title></title>
     <link href="../../../styles/NewComponentStyle.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .sumbissionControls {
+            height: auto;
+        }
+
+        #mainContent {
+            width: auto;
+        }
+
+        #form1 {
+            width: auto;
+            height: auto;
+        }
+
+        div {
+            width: auto;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div id="mainContent">
             <div id="heading">
-                <h1>New Battery</h1>
+                <h1 style="width: 427px">New Battery</h1>
             </div>
             <div id="formContainer">
                 <br />
-
                 <div class="fieldContainer">
                     <div class="labelContainer">
                         <asp:Label ID="nameLabel" runat="server" Text="Name: "></asp:Label>
@@ -24,7 +42,8 @@
                         <asp:TextBox ID="nameTextBox" runat="server"></asp:TextBox>
                     </div>
                 </div>
-                <asp:RequiredFieldValidator ID="nameValidator" runat="server" ControlToValidate="nameTextBox" ErrorMessage="Name is required"></asp:RequiredFieldValidator>
+                &nbsp;&nbsp;&nbsp;
+               
                 <div class="paddingDiv"></div>
                 <br />
                 <div class="fieldContainer">
@@ -35,7 +54,8 @@
                         <asp:TextBox ID="weightTextBox" runat="server"></asp:TextBox>
                     </div>
                 </div>
-                <asp:RequiredFieldValidator ID="WeightValidator" runat="server" ControlToValidate="weightTextBox" ErrorMessage="Weight is required"></asp:RequiredFieldValidator>
+                &nbsp;&nbsp;&nbsp;
+               
                 <div></div>
                 <br />
                 <div class="fieldContainer">
@@ -46,7 +66,8 @@
                         <asp:TextBox ID="capacityTextBox" runat="server"></asp:TextBox>
                     </div>
                 </div>
-                <asp:RequiredFieldValidator ID="CapacityValidator" runat="server" ControlToValidate="capacityTextBox" ErrorMessage="Capacity is Required"></asp:RequiredFieldValidator>
+                &nbsp;&nbsp;&nbsp;
+               
                 <div></div>
                 <br />
                 <div class="fieldContainer">
@@ -66,7 +87,8 @@
                         </asp:DropDownList>
                     </div>
                 </div>
-                <asp:RequiredFieldValidator ID="CellConfigValidator" runat="server" ControlToValidate="configDropdown" ErrorMessage="Choose a cell configuration"></asp:RequiredFieldValidator>
+                &nbsp;&nbsp;&nbsp;
+               
                 <div></div>
                 <br />
                 <div class="fieldContainer">
@@ -77,7 +99,8 @@
                         <asp:TextBox ID="contDischargeTextBox" runat="server"></asp:TextBox>
                     </div>
                 </div>
-                <asp:RequiredFieldValidator ID="ContDischargeValidator" runat="server" ControlToValidate="contDischargeTextBox" ErrorMessage="Continous Discharge Rate is required"></asp:RequiredFieldValidator>
+                &nbsp;&nbsp;&nbsp;
+               
                 <div></div>
                 <br />
                 <div class="fieldContainer">
@@ -88,18 +111,31 @@
                         <asp:TextBox ID="peakDischargeTextBox" runat="server"></asp:TextBox>
                     </div>
                 </div>
-                <asp:RequiredFieldValidator ID="PeakDischargeValidator" runat="server" ControlToValidate="peakDischargeTextBox" ErrorMessage="Peak Discharge Rate is required"></asp:RequiredFieldValidator>
+                &nbsp;&nbsp;&nbsp;
+               
+                <br />
                 <br />
                 <div class="sumbissionControls">
                     <br />
-                    <asp:Button ID="submitButton" runat="server" Text="Submit" OnClick="submitButton_Click" />
+                    <asp:Button ID="submitButton" runat="server" Text="Submit" OnClick="submitButton_Click" CausesValidation="False" />
+                </div>
+                <br />
+                <div id="errorDiv" runat="server">
                 </div>
             </div>
             <br />
-
-
         </div>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ComponentsConnectionString %>" ProviderName="<%$ ConnectionStrings:ComponentsConnectionString.ProviderName %>" SelectCommand="SELECT * FROM [Batteries]"></asp:SqlDataSource>
+        <div id="validators">
+            <asp:RequiredFieldValidator ID="nameValidator" runat="server" ControlToValidate="nameTextBox" ErrorMessage="Name is required" Style="display: none"></asp:RequiredFieldValidator>
+            <asp:RegularExpressionValidator ID="nameRegexValidator" runat="server" ControlToValidate="nameTextBox" ErrorMessage="Name must consist only of alphanumeric characters" Style="display: none" ValidationExpression="^[a-zA-Z0-9]*$"></asp:RegularExpressionValidator>
+            <asp:RequiredFieldValidator ID="WeightValidator" runat="server" ControlToValidate="weightTextBox" ErrorMessage="Weight is required" Style="display: none"></asp:RequiredFieldValidator>
+            <asp:RegularExpressionValidator ID="weightRegexValidator" runat="server" ControlToValidate="weightTextBox" ErrorMessage="Weight must be a numeric value (decimals allowed)" ValidationExpression="[0-9]+(\.[0-9][0-9]?)?" Style="display: none"></asp:RegularExpressionValidator>
+            <asp:RequiredFieldValidator ID="CapacityValidator" runat="server" ControlToValidate="capacityTextBox" ErrorMessage="Capacity is Required" Style="display: none"></asp:RequiredFieldValidator>
+            <asp:RegularExpressionValidator ID="capacityRegexValidator" runat="server" ControlToValidate="capacityTextBox" ErrorMessage="Capacity must be a numeric value" ValidationExpression="^[0-9]*$" Style="display: none"></asp:RegularExpressionValidator>
+            <asp:RequiredFieldValidator ID="CellConfigValidator" runat="server" ControlToValidate="configDropdown" ErrorMessage="Choose a cell configuration" Style="display: none"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="ContDischargeValidator" runat="server" ControlToValidate="contDischargeTextBox" ErrorMessage="Continuous Discharge Rate is required" Style="display: none"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="PeakDischargeValidator" runat="server" ControlToValidate="peakDischargeTextBox" ErrorMessage="Peak Discharge Rate is required" Style="display: none"></asp:RequiredFieldValidator>
+        </div>
     </form>
-    </body>
+</body>
 </html>

@@ -7,6 +7,7 @@
 
         //Assign the correct form for the 'New Component' Popup panel based on the dropdown selection
         switch (selectedComponent) {
+
             case "Batteries":
                 $('#PopupFrame').attr('src', 'new_component_forms/NewBattery.aspx')
                 break;
@@ -31,8 +32,6 @@
                 $('#PopupFrame').attr('src', 'new_component_forms/NewSpeedController.aspx')
                 break;
         }
-
-
 
     })
 }

@@ -7,6 +7,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.Configuration;
+using System.Web.UI.HtmlControls;
+using PersonalWebsite.web_forms.RC_Configurator.new_component_forms;
 
 namespace PersonalWebsite.web_forms
 {
@@ -15,17 +17,18 @@ namespace PersonalWebsite.web_forms
         protected void Page_Load(object sender, EventArgs e)
         {
 
-
         }
 
         protected void submitButton_Click(object sender, EventArgs e)
         {
+            //Validate the page
+            Page.Validate();
+
             if (IsValid)
             {
                 //Create a new SQL connection using the connection string in Web.config
                 SqlConnection con = new SqlConnection(
                     WebConfigurationManager.ConnectionStrings["ComponentsConnectionString"].ConnectionString);
-
                 using (con)
                 {
                     //Create a new SQL command with parameteres for inserting into Batteries table of Components database
@@ -44,6 +47,10 @@ namespace PersonalWebsite.web_forms
                         con.Close();
                     }
                 }
+            }
+            else
+            {
+                NewComponentValidation.showValidationErrors(errorDiv, Page);
             }
         }
     }

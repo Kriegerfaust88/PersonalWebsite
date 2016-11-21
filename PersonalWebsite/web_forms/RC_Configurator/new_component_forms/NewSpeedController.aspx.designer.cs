@@ -40,15 +40,6 @@ namespace PersonalWebsite.web_forms.RC_Configurator.new_component_forms {
         protected global::System.Web.UI.WebControls.TextBox nameTextBox;
         
         /// <summary>
-        /// nameValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator nameValidator;
-        
-        /// <summary>
         /// weightLabel control.
         /// </summary>
         /// <remarks>
@@ -65,15 +56,6 @@ namespace PersonalWebsite.web_forms.RC_Configurator.new_component_forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox weightTextBox;
-        
-        /// <summary>
-        /// WeightValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator WeightValidator;
         
         /// <summary>
         /// constCurrentLabel control.
@@ -94,15 +76,6 @@ namespace PersonalWebsite.web_forms.RC_Configurator.new_component_forms {
         protected global::System.Web.UI.WebControls.TextBox constCurrentTextBox;
         
         /// <summary>
-        /// constCurrentValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator constCurrentValidator;
-        
-        /// <summary>
         /// burstCurrentLabel control.
         /// </summary>
         /// <remarks>
@@ -119,15 +92,6 @@ namespace PersonalWebsite.web_forms.RC_Configurator.new_component_forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox burstCurrentTextBox;
-        
-        /// <summary>
-        /// burstCurrentValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator burstCurrentValidator;
         
         /// <summary>
         /// minCellLabel control.
@@ -148,15 +112,6 @@ namespace PersonalWebsite.web_forms.RC_Configurator.new_component_forms {
         protected global::System.Web.UI.WebControls.DropDownList minCellDropdown;
         
         /// <summary>
-        /// minCellValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator minCellValidator;
-        
-        /// <summary>
         /// maxCellLabel control.
         /// </summary>
         /// <remarks>
@@ -173,15 +128,6 @@ namespace PersonalWebsite.web_forms.RC_Configurator.new_component_forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList maxCellDropdown;
-        
-        /// <summary>
-        /// maxCellValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator maxCellValidator;
         
         /// <summary>
         /// circuitLabel control.
@@ -202,15 +148,6 @@ namespace PersonalWebsite.web_forms.RC_Configurator.new_component_forms {
         protected global::System.Web.UI.WebControls.DropDownList circuitDropdown;
         
         /// <summary>
-        /// circuitValidator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator circuitValidator;
-        
-        /// <summary>
         /// submitButton control.
         /// </summary>
         /// <remarks>
@@ -218,5 +155,77 @@ namespace PersonalWebsite.web_forms.RC_Configurator.new_component_forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button submitButton;
+        
+        /// <summary>
+        /// errorDiv control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl errorDiv;
+        
+        /// <summary>
+        /// nameValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator nameValidator;
+        
+        /// <summary>
+        /// WeightValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator WeightValidator;
+        
+        /// <summary>
+        /// constCurrentValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator constCurrentValidator;
+        
+        /// <summary>
+        /// burstCurrentValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator burstCurrentValidator;
+        
+        /// <summary>
+        /// minCellValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator minCellValidator;
+        
+        /// <summary>
+        /// maxCellValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator maxCellValidator;
+        
+        /// <summary>
+        /// circuitValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator circuitValidator;
     }
 }

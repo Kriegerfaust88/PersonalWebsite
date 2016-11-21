@@ -24,7 +24,6 @@
                         <asp:TextBox ID="nameTextBox" runat="server"></asp:TextBox>
                     </div>
                 </div>
-                <asp:RequiredFieldValidator ID="nameValidator" runat="server" ControlToValidate="nameTextBox" ErrorMessage="Name is required"></asp:RequiredFieldValidator>
                 <div class="paddingDiv"></div>
                 <br />
                 <div class="fieldContainer">
@@ -35,7 +34,6 @@
                         <asp:TextBox ID="weightTextBox" runat="server"></asp:TextBox>
                     </div>
                 </div>
-                <asp:RequiredFieldValidator ID="WeightValidator" runat="server" ControlToValidate="weightTextBox" ErrorMessage="Weight is required"></asp:RequiredFieldValidator>
                 <br />
                 <div></div>
                 <br />
@@ -47,7 +45,6 @@
                         <asp:TextBox ID="minVoltageTextBox" runat="server"></asp:TextBox>
                     </div>
                 </div>
-                <asp:RequiredFieldValidator ID="minVoltageValidator" runat="server" ControlToValidate="minVoltageTextBox" ErrorMessage="Min. Voltage is required"></asp:RequiredFieldValidator>
                 <div></div>
                 <br />
                 <div class="fieldContainer">
@@ -58,18 +55,25 @@
                         <asp:TextBox ID="maxVoltageTextBox" runat="server"></asp:TextBox>
                     </div>
                 </div>
-                <asp:RequiredFieldValidator ID="maxVoltageValidator" runat="server" ControlToValidate="maxVoltageTextBox" ErrorMessage="Max. Voltage is required"></asp:RequiredFieldValidator>
                 <br />
                 <div class="sumbissionControls">
                     <br />
-                    <asp:Button ID="submitButton" runat="server" Text="Submit" OnClick="submitButton_Click" />
+                    <asp:Button ID="submitButton" runat="server" Text="Submit" OnClick="submitButton_Click" CausesValidation="False" />
+                </div>
+                <div id="errorDiv" runat="server">
+                    
                 </div>
             </div>
             <br />
 
 
         </div>
-        
+        <div id="validators">
+                <asp:RequiredFieldValidator ID="nameValidator" runat="server" ControlToValidate="nameTextBox" ErrorMessage="Name is required" Display="None"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="WeightValidator" runat="server" ControlToValidate="weightTextBox" ErrorMessage="Weight is required"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="minVoltageValidator" runat="server" ControlToValidate="minVoltageTextBox" ErrorMessage="Min. Voltage is required" Display="None"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="maxVoltageValidator" runat="server" ControlToValidate="maxVoltageTextBox" ErrorMessage="Max. Voltage is required" Display="None"></asp:RequiredFieldValidator>
+        </div>
     </form>
 </body>
 </html>

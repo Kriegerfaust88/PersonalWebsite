@@ -103,6 +103,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="scripts\Components.js" />
+    <Content Include="scripts\new_component_scripts\newBatteryValidation.js" />
     <Content Include="styles\ComponentStyle.css" />
     <Content Include="styles\NewComponentStyle.css" />
     <Content Include="web_forms\RC_Configurator\AboutConfigurator.aspx" />
@@ -197,6 +198,7 @@
     <Compile Include="web_forms\RC_Configurator\new_component_forms\NewBattery.aspx.designer.cs">
       <DependentUpon>NewBattery.aspx</DependentUpon>
     </Compile>
+    <Compile Include="web_forms\RC_Configurator\new_component_forms\NewComponentValidation.cs" />
     <Compile Include="web_forms\RC_Configurator\new_component_forms\NewMotor.aspx.cs">
       <DependentUpon>NewMotor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

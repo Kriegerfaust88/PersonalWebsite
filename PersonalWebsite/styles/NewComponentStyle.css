@@ -1,4 +1,6 @@
-﻿body {
+﻿body {    width: 496px;
+    height: 1034px;
+    margin-top: 3px;
 }
 
 .fieldContainer {
@@ -18,7 +20,8 @@
 }
 
 #formContainer {
-    width: 649px;
+    width: 472px;
+    height: 812px;
 }
 
 .paddingDiv {

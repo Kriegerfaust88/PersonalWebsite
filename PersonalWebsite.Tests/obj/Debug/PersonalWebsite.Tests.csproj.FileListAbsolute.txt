@@ -15,10 +15,6 @@ C:\Users\Kriegerfaust\documents\visual studio 2015\Projects\PersonalWebsite\Pers
 C:\Users\Kriegerfaust\documents\visual studio 2015\Projects\PersonalWebsite\PersonalWebsite.Tests\bin\Debug\PersonalWebsite.Tests.pdb
 C:\Users\Kriegerfaust\documents\visual studio 2015\Projects\PersonalWebsite\PersonalWebsite.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 C:\Users\Kriegerfaust\documents\visual studio 2015\Projects\PersonalWebsite\PersonalWebsite.Tests\bin\Debug\PersonalWebsite.dll
-C:\Users\Kriegerfaust\documents\visual studio 2015\Projects\PersonalWebsite\PersonalWebsite.Tests\bin\Debug\PersonalWebsite.pdb
-C:\Users\Kriegerfaust\documents\visual studio 2015\Projects\PersonalWebsite\PersonalWebsite.Tests\obj\Debug\PersonalWebsite.Tests.csprojResolveAssemblyReference.cache
-C:\Users\Kriegerfaust\documents\visual studio 2015\Projects\PersonalWebsite\PersonalWebsite.Tests\obj\Debug\PersonalWebsite.Tests.dll
-C:\Users\Kriegerfaust\documents\visual studio 2015\Projects\PersonalWebsite\PersonalWebsite.Tests\obj\Debug\PersonalWebsite.Tests.pdb
 C:\Users\Kriegerfaust\documents\visual studio 2015\Projects\PersonalWebsite\PersonalWebsite.Tests\bin\Debug\AjaxControlToolkit.dll
 C:\Users\Kriegerfaust\documents\visual studio 2015\Projects\PersonalWebsite\PersonalWebsite.Tests\bin\Debug\Microsoft.WindowsAzure.Storage.dll
 C:\Users\Kriegerfaust\documents\visual studio 2015\Projects\PersonalWebsite\PersonalWebsite.Tests\bin\Debug\HtmlAgilityPack.dll
@@ -26,6 +22,7 @@ C:\Users\Kriegerfaust\documents\visual studio 2015\Projects\PersonalWebsite\Pers
 C:\Users\Kriegerfaust\documents\visual studio 2015\Projects\PersonalWebsite\PersonalWebsite.Tests\bin\Debug\Microsoft.Data.OData.dll
 C:\Users\Kriegerfaust\documents\visual studio 2015\Projects\PersonalWebsite\PersonalWebsite.Tests\bin\Debug\Microsoft.Data.Edm.dll
 C:\Users\Kriegerfaust\documents\visual studio 2015\Projects\PersonalWebsite\PersonalWebsite.Tests\bin\Debug\System.Spatial.dll
+C:\Users\Kriegerfaust\documents\visual studio 2015\Projects\PersonalWebsite\PersonalWebsite.Tests\bin\Debug\PersonalWebsite.pdb
 C:\Users\Kriegerfaust\documents\visual studio 2015\Projects\PersonalWebsite\PersonalWebsite.Tests\bin\Debug\AjaxControlToolkit.pdb
 C:\Users\Kriegerfaust\documents\visual studio 2015\Projects\PersonalWebsite\PersonalWebsite.Tests\bin\Debug\Microsoft.WindowsAzure.Storage.xml
 C:\Users\Kriegerfaust\documents\visual studio 2015\Projects\PersonalWebsite\PersonalWebsite.Tests\bin\Debug\Microsoft.Data.OData.xml
@@ -75,3 +72,6 @@ C:\Users\Kriegerfaust\documents\visual studio 2015\Projects\PersonalWebsite\Pers
 C:\Users\Kriegerfaust\documents\visual studio 2015\Projects\PersonalWebsite\PersonalWebsite.Tests\bin\Debug\ru\System.Spatial.resources.dll
 C:\Users\Kriegerfaust\documents\visual studio 2015\Projects\PersonalWebsite\PersonalWebsite.Tests\bin\Debug\zh-Hans\System.Spatial.resources.dll
 C:\Users\Kriegerfaust\documents\visual studio 2015\Projects\PersonalWebsite\PersonalWebsite.Tests\bin\Debug\zh-Hant\System.Spatial.resources.dll
+C:\Users\Kriegerfaust\documents\visual studio 2015\Projects\PersonalWebsite\PersonalWebsite.Tests\obj\Debug\PersonalWebsite.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Kriegerfaust\documents\visual studio 2015\Projects\PersonalWebsite\PersonalWebsite.Tests\obj\Debug\PersonalWebsite.Tests.dll
+C:\Users\Kriegerfaust\documents\visual studio 2015\Projects\PersonalWebsite\PersonalWebsite.Tests\obj\Debug\PersonalWebsite.Tests.pdb
